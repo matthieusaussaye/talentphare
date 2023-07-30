@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+<div class="py-6 px-6">
+    <h1 class="text-xl">Customers</h1>
+    <div class ="2mt-6 flex justify-between">
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Name</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Infos</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q1</>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A1</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q2</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A2</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q3</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A3</p>
+    </div>
+    {% for customer,details in data.items %}
+        <div class="flex justify-between">
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{customer}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Infos}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q1}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A1}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q2}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A2}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q3}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A3}}</p>
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
