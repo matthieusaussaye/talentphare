@@ -1,0 +1,16 @@
+2021-07-16 16:24:41,527 - root - INFO - Reading Data
+2021-07-16 16:24:41,578 - root - INFO - Dropping Features in data
+2021-07-16 16:24:41,884 - root - INFO - Preparing to write to DB
+2021-07-16 16:24:41,886 - root - INFO - Starting to create Engine to connect to the db
+2021-07-16 16:24:41,887 - root - INFO - Trying to create Database
+2021-07-16 16:24:41,948 - root - INFO - DataBase created
+2021-07-16 16:24:41,948 - root - INFO - Creating tables in the db
+2021-07-16 16:24:42,121 - root - INFO - Recreating tables in the db
+2021-07-16 16:24:42,121 - root - INFO - Dropping and creating tables in the db
+2021-07-16 16:24:42,224 - root - INFO - Creating tables in the db
+2021-07-16 16:24:42,268 - root - INFO - Writing Data Into the DB
+2021-07-16 16:24:42,269 - root - INFO - Preparing to write to DB
+2021-07-16 16:24:42,279 - root - INFO - Writing Data into DB
+2021-07-16 16:24:42,287 - root - INFO - Writing to table pl_bi in DB
+2021-07-16 16:24:42,678 - root - INFO - Writing to table pl_bi finished, total rows written 1705
+2021-07-16 16:24:42,682 - root - INFO - Finished writing data
