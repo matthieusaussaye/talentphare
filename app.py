@@ -30,7 +30,7 @@ messages=[]
 first_input = True
 st.write("What is for you Brio Maté ?")
 audio_bytes = st_audiorec()
-openai.api_key = "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"
+
 if audio_bytes is not None and len(messages) < 5:
     # display audio data as received on the backend
     #st.audio(audio_bytes, format='audio/wav')
