@@ -15,9 +15,7 @@ import openai
 import tempfile
 import wave
 import time
-
 from st_custom_components import st_audiorec
-
 import wave
 import io
 
@@ -28,11 +26,11 @@ def bytes_to_wav(audio_bytes, output_filename, sample_width=2, frame_rate=44100,
         wav_file.setframerate(frame_rate)
         wav_file.writeframes(audio_bytes)
 
-
+messages=[]
 first_input = True
-st.write("Bonjour, racontez moi votre venue dans mon restaurant, qu'avez-vous mangé et quelles sont vos impressions sur votre expérience?")
+st.write("What is for you Brio Maté ?")
 audio_bytes = st_audiorec()
-openai.api_key = ""
+openai.api_key = "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"
 if audio_bytes is not None and len(messages) < 5:
     # display audio data as received on the backend
     #st.audio(audio_bytes, format='audio/wav')
@@ -43,19 +41,19 @@ if audio_bytes is not None and len(messages) < 5:
     filename = 'output.wav'
     # Open the .wav file
     wav_audio_data = open(filename, "rb")
-    begin = time.time()
-    with open('surveys/prompt_restaurant.txt', 'r') as f:
+    
+    with open('surveys/prompt_Brio_demo.txt', 'r') as f:
         messages = eval(f.read())
         with open('surveys/user1.txt', 'r') as f:
             messages = eval(f.read())
     transcript = openai.Audio.transcribe("whisper-1", wav_audio_data)
     messages.append( {"role": "user", "content": transcript["text"]})
-    st.write("Elapsed time for Speech2text: "+str(time.time()-begin))
+   
     #st.write(transcript["text"])
-    begin = time.time()
+    
     response=openai.ChatCompletion.create(model="gpt-3.5-turbo",
                                           messages=messages)
-    st.write("Elapsed time for LqLM: "+str(time.time()-begin))
+   
     #st.write(response['choices'][0]['message']['content'])
     messages.append( {"role": "assistant", "content": response['choices'][0]['message']['content']})
     for k in range(2,len(messages)):
