@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
+
+from .models import Userprofile
 
 def signup(request):
     if request.method == 'POST':
