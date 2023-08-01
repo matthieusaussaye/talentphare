@@ -4,7 +4,10 @@
 
 {% block content %}
 <div class="py-6 px-6">
-    <h1 class="text-xl">Customers</h1>
+    <h1 class="text-xl align-self-center">Customers</h1>
+    <div class ="2mt-6 flex justify-between">
+    <a href="{% url 'export_dict' %}" class="py-2 px-4 bg-teal-600 rounded-xl text-white"><button>Export to Excel</button></a>
+    </div>
     <div class ="2mt-6 flex justify-between">
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Name</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Infos</p>
