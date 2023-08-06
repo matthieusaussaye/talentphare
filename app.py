@@ -18,7 +18,10 @@ import time
 from st_custom_components import st_audiorec
 import wave
 import io
+import os.path
 
+
+openai.api_key = "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"
 def bytes_to_wav(audio_bytes, output_filename, sample_width=2, frame_rate=44100, channels=2):
     with wave.open(output_filename, 'wb') as wav_file:
         wav_file.setnchannels(channels)
@@ -27,36 +30,62 @@ def bytes_to_wav(audio_bytes, output_filename, sample_width=2, frame_rate=44100,
         wav_file.writeframes(audio_bytes)
 
 messages=[]
-first_input = True
-st.write("What is for you Brio Maté ?")
-audio_bytes = st_audiorec()
+name,age=None,None
+audio_bytes=None
+first_question = True
 
-if audio_bytes is not None and len(messages) < 5:
+if "disabled" not in st.session_state:
+    st.session_state["disabled"] = False
+
+if len(messages) == 0:
+    st.write("Drop me your name and your age please :)")
+    col1, col2 = st.columns(2)
+    with col1:
+        name = st.text_input("Your Name & Surname ",
+                             disabled=st.session_state.disabled)
+    with col2:
+        age = st.text_input("Age",
+                            disabled=st.session_state.disabled)
+# Preparing the interview
+if age and name :
+    st.session_state["disabled"] = True
+    audio_bytes = st_audiorec()
+    with open('surveys/prompt_Brio_demo.txt', 'r') as f:
+        messages = eval(f.read())
+        messages.append({"role": "assistant", "content": "What is for you Brio Maté ?"})
+    if not os.path.isfile(f'surveys/{name}.txt'):
+        with open(f'surveys/{name}.txt', 'w') as f:
+            f.write(str(messages))
+        with open(f'surveys/{name}.txt', 'r') as f:
+            messages = eval(f.read())
+    if os.path.isfile(f'surveys/{name}.txt'):
+        with open(f'surveys/{name}.txt', 'r') as f:
+            messages = eval(f.read())
+            st.write(messages[len(messages)-1]['content'])
+
+
+if audio_bytes is not None and len(messages) < 11:
     # display audio data as received on the backend
-    #st.audio(audio_bytes, format='audio/wav')
+    # st.audio(audio_bytes, format='audio/wav')
     # Now use the function
     bytes_to_wav(audio_bytes, 'output.wav')  # Replace audio_bytes with your audio data
-    
     # The name of the .wav file
     filename = 'output.wav'
     # Open the .wav file
     wav_audio_data = open(filename, "rb")
-    
-    with open('surveys/prompt_Brio_demo.txt', 'r') as f:
-        messages = eval(f.read())
-        with open('surveys/user1.txt', 'r') as f:
-            messages = eval(f.read())
     transcript = openai.Audio.transcribe("whisper-1", wav_audio_data)
-    messages.append( {"role": "user", "content": transcript["text"]})
-   
-    #st.write(transcript["text"])
-    
-    response=openai.ChatCompletion.create(model="gpt-3.5-turbo",
-                                          messages=messages)
-   
+    messages.append({"role": "user", "content": transcript["text"]})
+    st.write(transcript["text"])
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
+                                            messages=messages)
     #st.write(response['choices'][0]['message']['content'])
-    messages.append( {"role": "assistant", "content": response['choices'][0]['message']['content']})
-    for k in range(2,len(messages)):
-        st.write(messages[k]['content'])
-    with open('surveys/user1.txt', 'w') as f:
+    messages.append({"role": "assistant", "content": response['choices'][0]['message']['content']})
+    st.write(messages[len(messages)-1]['content'])
+    with open(f'surveys/{name}.txt', 'w') as f:
         f.write(str(messages))
+
+
+
+elif len(messages) >= 11 :
+    st.write("This is the end of the survey - Thanks a lot for your time !")
+

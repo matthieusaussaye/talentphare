@@ -5,7 +5,7 @@ import openpyxl
 import pandas as pd
 @login_required
 def dashboard(request):
-    with open('/home/paulm/talentphare/surveys/user1.txt', 'r') as f:
+    with open('/Users/matthieusaussaye/PycharmProjects/talentphare/surveys/user1.txt', 'r') as f:
         new_consumer_dict = eval(f.read())
     dict_test = {
         "Matthieu Saussaye": {
@@ -41,6 +41,8 @@ def dashboard(request):
 
 @login_required
 def export_dict(request):
+    with open('/Users/matthieusaussaye/PycharmProjects/talentphare/surveys/user1.txt', 'r') as f:
+        new_consumer_dict = eval(f.read())
     dict_test = {
         "Matthieu Saussaye": {
             "Infos": "Matthieu is a regular consumer of Brio Maté and enjoys its unique flavor.",
@@ -59,7 +61,16 @@ def export_dict(request):
             "A2": "Yes, Brio Maté is suitable for vegans. It doesn't contain any animal products.",
             "Q3": "Where can I buy Brio Maté?",
             "A3": "Brio Maté is available in various grocery stores and online marketplaces.",
-        }
+        },
+        "new_consumer": {
+            "Infos": "",
+            "Q1": "What is for you Brio Maté ?",
+            "A1": new_consumer_dict[1]['content'],
+            "Q2": new_consumer_dict[2]['content'],
+            "A2": new_consumer_dict[3]['content'],
+            "Q3": new_consumer_dict[4]['content'],
+            "A3": new_consumer_dict[5]['content']}
+
     }
 
     df = pd.DataFrame.from_dict(dict_test, orient='index')
