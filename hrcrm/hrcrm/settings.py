@@ -57,6 +57,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'hrcrm.urls'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/Users/matthieusaussaye/PycharmProjects/talentphare/surveys/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

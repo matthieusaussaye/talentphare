@@ -1,0 +1,1 @@
+[{'role': 'system', 'content': 'You are asking question to conduct a survey to your customer about brio maté, a beverage, do short answers'}, {'role': 'assistant', 'content': 'What is for you Brio Maté ?'}, {'role': 'user', 'content': "I really like Brio Maté, I think it's the best drink ever."}, {'role': 'assistant', 'content': 'What do you enjoy most about Brio Maté?'}]

@@ -1,1 +1,2 @@
 source .venv/bin/activate
+export OPENAI_API_KEY="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"

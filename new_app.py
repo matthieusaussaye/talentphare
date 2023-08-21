@@ -24,7 +24,6 @@ openai.api_key = "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"
 from audio_recorder_streamlit import audio_recorder
 
 
-
 def bytes_to_wav(audio_bytes, output_filename, sample_width=2, frame_rate=44100, channels=2):
     with wave.open(output_filename, 'wb') as wav_file:
         wav_file.setnchannels(channels)

@@ -1,35 +1,45 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Customers{% endblock %}
+{% block title %}Applicants{% endblock %}
 
 {% block content %}
 <div class="py-6 px-6">
-    <h1 class="text-xl align-self-center">Customers</h1>
-    <div class ="2mt-6 flex justify-between">
-    <a href="{% url 'export_dict' %}" class="py-2 px-4 bg-teal-600 rounded-xl text-white"><button>Export to Excel</button></a>
+    <h1 class="text-xl align-self-center">Applicants</h1>
+    <div class="mt-6 flex justify-between">
+        <a href="{% url 'export_dict' %}" class="py-6 px-6 rounded-xl flex justify-between bg-gradient-to-r from-purple-200 to-blue-200"><button>Export to Excel</button></a>
     </div>
-    <div class ="2mt-6 flex justify-between">
+    <div class="mt-6 flex justify-between">
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Name</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Image</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Infos</p>
-        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q1</>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Job Post</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q1</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A1</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q2</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A2</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Q3</p>
         <p class="py-4 px-2 bg-gray-200 font-semibold w-full">A3</p>
+        <p class="py-4 px-2 bg-gray-200 font-semibold w-full">CV</p>
     </div>
     {% for customer,details in data.items %}
         <div class="flex justify-between">
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{customer}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Infos}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q1}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A1}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q2}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A2}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.Q3}}</p>
-            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' % ">{{details.A3}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{customer}}</p>
+            <img src="{{ MEDIA_URL }}images/{{ customer|slugify }}.jpeg" alt="{{customer}}'s image" class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.Infos}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.job_post}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.Q1}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.A1}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.Q2}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.A2}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.Q3}}</p>
+            <p class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">{{details.A3}}</p>
+            <a href="{{ MEDIA_URL }}cvs/{{ customer|slugify }}.pdf" target="_blank" class="py-2 px-2 w-full {% cycle 'bg-gray-100' '' %}">View CV</a>
         </div>
     {% endfor %}
-
 </div>
 {% endblock %}
+
+
+
+
+

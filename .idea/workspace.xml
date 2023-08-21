@@ -5,14 +5,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33344c14-c666-42c3-aa09-70d81a7cec76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.streamlit/config.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Accueil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aws/synthesize_speech.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/Matthieu Saussaye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/Matthieu Saussaye.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/Matthieu_Saussaye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/Matthieu_Saussaye.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard/MATTHIEU_SAUSSAYE.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard/Matthieu Saussaye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard/Matthieu Saussaye.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/idiap.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/brain.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/evaluation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/happy.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/hello.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/interview.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/recording.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/talk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/welcome.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initialization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Behavioral Screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Culture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Experience.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Professional Screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Resume Screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Technique.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/prompt_selector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/prompts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speech_recognition/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speech_recognition/openai_whisper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/st_audiorec/st_custom_components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/ai_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Baptiste seux.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Matthieu SAUSSAYE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Matthieu Saussaye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Matthieu Saussaye.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Matthieu_Saussaye.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surveys/Matthieu_Saussaye.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp/audio.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENV.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ENV.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business_profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer_profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/core/templates/core/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/core/templates/core/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/core/templates/core/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/dashboard/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrcrm/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/dict_test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/dict_test.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrcrm/hrcrm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hrcrm/hrcrm/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.wav" beforeDir="false" afterPath="$PROJECT_DIR$/output.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surveys/JONSHON B.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/surveys/Paul Margain.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/surveys/Saussaye Matthieu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/surveys/qwqwd.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/precache-manifest.4829c060d313d0b0d13d9af3b0180289.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/css/2.bfbf028b.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/css/2.bfbf028b.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/2.270b84d8.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/2.270b84d8.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/2.270b84d8.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/main.833ba252.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/main.833ba252.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/runtime-main.11ec9aca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/static/js/runtime-main.11ec9aca.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/build/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/st_audiorec/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/st_audiorec/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/st_audiorec/frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +114,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2TAQcPC25XIwlx2k7FPvJBNM50C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +127,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/matthieusaussaye/PycharmProjects/talentphare/hrcrm/dashboard",
+    "last_opened_file_path": "/Users/matthieusaussaye/PycharmProjects/talentphare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,15 +138,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/hrcrm/dashboard" />
-      <recent name="$PROJECT_DIR$/hrcrm/userprofile/templates/userprofile" />
-      <recent name="$PROJECT_DIR$/hrcrm/core/templates/core" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/surveys" />
+      <recent name="$PROJECT_DIR$/hrcrm/dashboard" />
+      <recent name="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard" />
+      <recent name="$PROJECT_DIR$/hrcrm/dashboard/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard" />
       <recent name="$PROJECT_DIR$/hrcrm/dashboard" />
+      <recent name="$PROJECT_DIR$/surveys" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/hrcrm/dashboard/templates/dashboard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -80,7 +163,16 @@
       <workItem from="1690484231068" duration="10174000" />
       <workItem from="1690540062233" duration="14362000" />
       <workItem from="1690562613565" duration="36694000" />
-      <workItem from="1691233881985" duration="19397000" />
+      <workItem from="1691233881985" duration="20345000" />
+      <workItem from="1691356280206" duration="2917000" />
+      <workItem from="1691422809030" duration="2547000" />
+      <workItem from="1691514733090" duration="2401000" />
+      <workItem from="1691692430485" duration="1982000" />
+      <workItem from="1691790434961" duration="672000" />
+      <workItem from="1692279902422" duration="24776000" />
+      <workItem from="1692428092294" duration="89000" />
+      <workItem from="1692428944857" duration="1706000" />
+      <workItem from="1692604207449" duration="1474000" />
     </task>
     <servers />
   </component>

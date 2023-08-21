@@ -1,12 +1,14 @@
-#python = "^3.7.10"
-pre-commit
-asyncpg==0.22.0
-aiohttp==3.7.4
-numpy==1.20.3
-pandas==1.1
-xlrd==1.2.0
-psycopg2==2.7.7
-SQLAlchemy==1.4.15
-SQLAlchemy-Utils==0.37.4
-pymssql==2.2.2
-pymongo==4.0.1
+langchain
+PyPDF2
+openai
+wave
+streamlit==1.25.0
+tiktoken
+nltk
+#azure-cognitiveservices-speech
+audio_recorder_streamlit
+streamlit-option-menu
+streamlit-lottie
+faiss-cpu
+boto3
+Ipython
