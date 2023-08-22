@@ -7,6 +7,7 @@ def switch_page(page_name: str):
 
     page_name = standardize_name(page_name)
 
+    # Store name_surname in session state
     pages = get_pages("home.py")  # OR whatever your main page is called
 
     for page_hash, config in pages.items():

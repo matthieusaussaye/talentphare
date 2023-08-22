@@ -30,6 +30,10 @@ st.markdown("""\n""")
 #position = st.selectbox("Sélectionnez le poste pour lequel vous postulez", ["Data Analyst", "Ingénieur Logiciel", "Marketing"])
 position="Data Analyst"
 resume = st.file_uploader("Téléchargez votre CV", type=["pdf"])
+if 'name_surname' in st.session_state:
+    st.write(f"Nom: {st.session_state.name_surname}")
+else:
+    st.write("Merci de préciser le nom à l'accueil")
 #auto_play = st.checkbox("Let AI interviewer speak! (Please don't switch during the interview)")
 
 #st.toast("4097 tokens is roughly equivalent to around 800 to 1000 words or 3 minutes of speech. Please keep your answer within this limit.")
@@ -40,6 +44,8 @@ class Message:
     origin: Literal["human", "ai"]
     message: str
 
+with st.sidebar:
+    st.markdown("IDIAP Create Challenge 2023")
 def save_vector(resume):
     """embeddings"""
     nltk.download('punkt')

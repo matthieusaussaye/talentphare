@@ -21,7 +21,7 @@ import io
 import os.path
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 def bytes_to_wav(audio_bytes, output_filename, sample_width=2, frame_rate=44100, channels=2):
     with wave.open(output_filename, 'wb') as wav_file:
         wav_file.setnchannels(channels)

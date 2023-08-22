@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33344c14-c666-42c3-aa09-70d81a7cec76" name="Changes" comment="" />
+    <list default="true" id="33344c14-c666-42c3-aa09-70d81a7cec76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil.py" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ENV.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ENV.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config_db.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/config/config_db.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Behavioral Screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Culture.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Culture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Experience.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Experience.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Professional Screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Resume Screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Technique.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Technique.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surveys/John Cena.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/surveys/Johnson Miracle.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/surveys/Matthieu_Saussaye.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/surveys/prompt_restaurant.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +63,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,7 +103,7 @@
       <workItem from="1692279902422" duration="24776000" />
       <workItem from="1692428092294" duration="89000" />
       <workItem from="1692428944857" duration="1706000" />
-      <workItem from="1692604207449" duration="3268000" />
+      <workItem from="1692604207449" duration="22288000" />
     </task>
     <servers />
   </component>

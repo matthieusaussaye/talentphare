@@ -24,6 +24,7 @@ from IPython.display import Audio
 
 st.markdown("#### Bienvenue, nous allons discuter des valeurs de notre entreprise")
 jd = st.text_area("Culture de l'entreprise:")
+st.session_state.culture_entreprise = jd
 #jd="The Banque Cantonale du Valais (Switzerland) is a bank that deeply values innovation rooted in tradition, maintains close and meaningful relationships with its clients, is committed to sustainable operations and environmental responsibility, and upholds a high standard of professional competence and expertise in its services.The Banque Cantonale du Valais (Switzerland) is seeking a Data Analyst to join their DATA team in Sion, with a workload of 80-100%. The role involves interacting with users, analyzing their needs, and supporting them in using new tools. The Data Analyst will be expected to collaborate with business teams in design workshops, actively participate in technological developments related to data management, and write technical documentation. Ideal candidates should have higher education in computer science (or equivalent) and experience in a similar role. Knowledge of the banking sector is considered a plus. Proficiency in computer tools such as Power BI and Azure Databricks, as well as good writing skills and knowledge of German and/or English, are required. The candidate should be committed, proactive, passionate about their profession, and able to work autonomously and collaboratively with other experts."
 
 #st.toast("4097 tokens is roughly equivalent to around 800 to 1000 words or 3 minutes of speech. Please keep your answer within this limit.")
@@ -34,6 +35,25 @@ class Message:
     origin: Literal["human", "ai"]
     message: str
 
+with st.sidebar:
+    st.markdown("IDIAP Create Challenge 2023")
+
+
+if "jd_history" in st.session_state:
+    interview = []
+    dict_to_save = {}
+    st.info(str(len(st.session_state.jd_history)))
+    if len(st.session_state.jd_history) == 9:
+        for e in st.session_state.jd_history:
+            interview.append(e)
+        interview_str = '|'.join([str(item) for item in interview])
+        st.session_state.interview = interview_str
+        st.session_state.short_interview = interview_str
+        dict_to_save["culture_entreprise"] = st.session_state.culture_entreprise
+        dict_to_save["name"] = st.session_state.name_surname
+        dict_to_save["interview"] = st.session_state.interview
+        dict_to_save["short_interview"] = st.session_state.short_interview
+        st.info(str(dict_to_save))
 def save_vector(text):
     """embeddings"""
 
@@ -67,7 +87,7 @@ def initialize_session_state_jd():
         st.session_state.token_count = 0
     if "jd_guideline" not in st.session_state:
         llm = ChatOpenAI(
-        model_name = "gpt-4",
+        model_name = "gpt-3.5-turbo",
         temperature = 0.8,)
         st.session_state.jd_guideline = RetrievalQA.from_chain_type(
             llm=llm,
@@ -197,3 +217,7 @@ if jd:
         Progress: {int(len(st.session_state.jd_history) / 30 * 100)}% completed.""")
 else:
     st.info("Merci de préciser la culture d'entreprise pour commencer l'entretien")
+    if 'name_surname' in st.session_state:
+        st.write(f"Nom: {st.session_state.name_surname}")
+    else:
+        st.write("Merci de préciser le nom à l'accueil")

@@ -3,12 +3,16 @@ from streamlit_option_menu import option_menu
 from app_utils import switch_page
 import streamlit as st
 from PIL import Image
+import time
 
 # ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-im_icon=Image.open("icc.png")
+im_icon = Image.open("icc.png")
 im = Image.open("idiap.jpeg")
+
 #st.image(im,width=50)
-st.set_page_config(page_title = "AI Interviewer", layout = "centered",page_icon=im_icon)
+st.set_page_config(page_title = "AI Interviewer",
+                   layout = "centered",
+                   page_icon=im_icon)
 
 home_title = "Smart Interview"
 home_introduction = "Welcome to HR.AI, empowering your candidate screening with AI."
@@ -28,6 +32,8 @@ st.markdown("""\n""")
 #st.markdown("#### Greetings")
 st.markdown("""\n""")
 
+# Create an input field for the name
+st.session_state.name_surname = st.text_input('Entrez votre nom:')
 st.markdown("#### Valorisez votre candidature en répondant à nos 3 questions:")
 
 st.markdown("""\n""")
@@ -38,27 +44,27 @@ selected = option_menu(
         default_index=0,
         orientation="horizontal",
     )
+
 if selected == 'Technique':
     st.info("""
         Nous évaluerons vos compétences techniques par rapport à la description du poste.""")
-        
+
     if st.button("Commencer l'entretien !"):
         switch_page("Technique")
 
 if selected == 'Expérience':
     st.info("""
     Nous examinerons votre CV et discuterons de vos expériences passées.""")
-    
+
     if st.button("Commencer l'entretien !"):
         switch_page("Experience")
 
 if selected == 'Culture':
     st.info("""
     Nous évaluerons vos compétences interpersonnelles par rapport à la description du poste.""")
-    
+
     if st.button("Commencer l'entretien !"):
         switch_page("Culture")
-
 
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 

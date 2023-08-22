@@ -34,6 +34,8 @@ class Message:
     origin: Literal["human", "ai"]
     message: str
 
+with st.sidebar:
+    st.markdown("IDIAP Create Challenge 2023")
 def save_vector(text):
     """embeddings"""
 
@@ -197,3 +199,7 @@ if jd:
         Progress: {int(len(st.session_state.jd_history) / 30 * 100)}% completed.""")
 else:
     st.info("Merci de préciser l'offre d'emploi pour commencer l'entretien")
+    if 'name_surname' in st.session_state:
+        st.write(f"Nom: {st.session_state.name_surname}")
+    else:
+        st.write("Merci de préciser le nom à l'accueil")
